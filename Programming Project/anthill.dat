@@ -1,0 +1,139 @@
+//Id, nombre, descr grafica, descr, iluminado
+#s:000¿Escaleras piso 0¿   ___   ¿  /___\  ¿ |_____| ¿/_______\¿|_______|¿Como con el oceano, las profundidades de la EPS no han sido todavia exploradas por el hombre. Ten cuidado, pues no sabes que te encontraras aqui¿Las escaleras que nunca has cogido¿0¿
+#s:001¿Altar¿ _______ ¿/_#_#__/ ¿  |__|/  ¿ #    ## ¿#  #  #  ¿Te encuentras en una sucia habitacion de colores oscuros, que te genera miedo e inquietud. En el centro se distingue un altar con lo que parecen manchas de sangre¿Un altar a Linus Torvalds¿0¿
+#s:002¿Celda¿|||||||||¿|||||||||¿||||    |¿||||   o|¿||||____|¿Una pequeno habitaculo con gruesos barrotes. En el suelo hay calaveras y en las paredes se distinguen algunas escrituras: "tipo incompleto", "memory wasn't freed"¿Aqui va la memoria que no liberaste¿0¿
+#s:003¿Pasadizo¿         ¿         ¿         ¿         ¿         ¿Un estrecho tunel, igual de perturbador que el resto del piso, que parece dar a unas escaleras¿Un pasadizo que podria apuntar a NULL¿0¿
+
+#s:100¿Escaleras piso 1¿   ___   ¿  /___\  ¿ |_____| ¿/_______\¿|_______|¿Haces mas gemelo subiendo las escaleras que en el gimnasio (es broma, estudias informatica, no vas al gimnasio).¿Las mismas escaleras de siempre¿1¿
+#s:101¿Hall¿         ¿         ¿         ¿         ¿         ¿Un imponente hall para una no tan imponente persona.¿La entrada a la EPS¿1¿
+#s:102¿Pasillo 01-04¿         ¿         ¿         ¿         ¿         ¿Un pasillo normal y corriente.¿Pasillo a clase¿1¿
+#s:103¿Comedor¿         ¿  _______¿ /______/¿ ||    ||¿ |     | ¿Puedes traer tus mochilas viejas para deshacerte de ellas. Hay gente muy maja que se la lleva sin preguntar. Tambien puedes comer.¿Comedor en el que el agua es verde¿1¿
+#s:104¿Cafeteria¿         ¿ _______ ¿/__$__$/ ¿ |    || ¿ |____|/ ¿Una cafeteria genial en la que comer sin ningun tipo de sosiego porque tenemos clase por la tarde tambien (cambiad los horarios porfi).¿Los bocadillos dan diarrea¿1¿
+#s:105¿Aula EDat¿         ¿  _______¿ /______/¿ ||    ||¿ |     | ¿Una clase ideal para hacer record en Geometry Dash¿Clase de EDAT, intenta no dormirte¿1¿
+#s:106¿Pasillo 05-09¿         ¿         ¿         ¿         ¿         ¿Un estupendo pasillo en el que comerte la cabeza porque tu respuesta del examen era distinta de la del resto.¿Apenas llegan los rayos del sol¿1¿
+#s:107¿Aula fisica¿         ¿  _______¿ /______/¿ ||    ||¿ |     | ¿Todavia te sigues preguntando como demonios se calculaba la tension de Thevenin.¿Sois tres gatos en clase¿1¿
+#s:108¿Banos¿         ¿         ¿  __!__  ¿  \___/  ¿   |_|   ¿Hay grotescas pinturas rupestres en las paredes. Bajo un lavabo demolido se distingue un cadaver. Se escuchan grunidos provenientes de una cabina.¿Huelen mal y no hay jabon¿1¿
+#s:109¿Sala extrana¿         ¿    ____ ¿   |    |¿   |   o|¿   |____|¿Todas las paredes estan llenas de posters sobre Rust (el logo tiene licencia GNU).¿Parece que hay unos posters¿1¿
+#s:110¿Sede Linuxmafia¿ _______ ¿| ----- |¿||     ||¿|_-----_|¿  /___\  ¿Una gigantesca habitacion (los linux mafiosos dicen que cabe en la EPS porque vivimos en una simulacion y la sala esta programada en assembly que es mas eficiente).¿No hay mucha luz y el ordenador mas nuevo es del 99¿1¿
+#s:111¿Calle tras la EPS¿---------¿         ¿:::::::::¿         ¿---------¿Al fin. Eres libre. Has derramado sangre y has tenido que cooperar con la linuxmafia, si, pero ha merecido la pena. Has escapado de la EPS¿Hay hierba y aire fresco¿1¿
+#s:112¿Entrada EPS¿ _-----_ ¿/ #   # \¿\__---_#/¿   | |   ¿   |_|   ¿Al fin. Eres libre. Los retos a los que te has enfrentado no han sido faciles, pero los has superado con entereza. Has escapado de la EPS¿Hay hierba y aire fresco¿1¿
+
+#s:200¿Escaleras piso 2¿   ___   ¿  /___\  ¿ |_____| ¿/_______\¿|_______|¿Ya vas cansado. Deberias hacer cardio en vez de jugar tanto al lol.¿Las escaleras son interminables¿1¿
+#s:201¿Pasillo¿         ¿         ¿         ¿         ¿         ¿Desde aqui se ven las coronillas de estudiantes y profesores por igual. Como la muerte, las coronillas nos igualan a todos¿El suelo esta reluciente (nadie pasa por aqui)¿1¿
+#s:202¿Pasillo¿         ¿         ¿         ¿         ¿         ¿La curiosidad se apodera de ti, al saber que te adentras donde ningun alumno se ha atrevido a asomarse.¿Alomejor no deberias estar aqui¿1¿
+#s:203¿Pasillo¿         ¿         ¿         ¿         ¿         ¿Nunca has visto a nadie salir de aqui con vida. Te preguntas si esta aventura vale la pena¿Parece que hay algo interesante¿1¿
+#s:204¿Despacho director¿         ¿  _______¿ /______/¿ ||    ||¿ |     | ¿Parece un despacho, pero no sabes de quien es, o incluso si realmente es de alguien¿El despacho marca la linea entre lo real y lo paranormal¿1¿
+
+#s:300¿Escaleras piso 3¿   ___   ¿  /___\  ¿ |_____| ¿/_______\¿|_______|¿Tio, estas sudando. Sabras mucho sobre C pero no puedes subir unas escaleras. Menudo despojo de la sociedad. Haz deporte de una vez¿Casi estas en la cima¿1¿
+#s:301¿Pasillo¿         ¿         ¿         ¿         ¿         ¿Desde aqui las personas parecen simples hormigas (es una referencia sin ningun contexto ni gracia al anthill)¿Pasillo hacia los laboratorios¿1¿
+#s:302¿Pasillo¿         ¿         ¿         ¿         ¿         ¿Aqui es donde toca hacerse los 100 metros olimpicos porque no te da tiempo a marcar la asistencia¿Pasillo con taquillas¿1¿
+#s:303¿Lab. fisica¿         ¿  _______¿ /______/¿ ||    ||¿ |     | ¿De tantas resistencias que quemas tienes los pulmones de un fumador compulsivo¿Tiene diferentes instrumentos¿1¿
+#s:304¿Pprog¿   ___   ¿ _|___|__¿/_/___/_/¿||     ||¿|      | ¿El lugar perfecto para dar a luz a este delirio de juego¿Las sillas giratorias son comodas¿1¿
+#s:305¿Pasillo¿         ¿         ¿         ¿         ¿         ¿Despues de los examenes de algebra saltar por la barandilla se hace una opcion cada vez mas apetecible¿Pasillo con barandilla¿1¿
+#s:306¿Lab. EDat¿   ___   ¿ _|___|__¿/_/___/_/¿||     ||¿|      | ¿Quiza no sea optimo tener que verte las presentaciones enteras en cada practica por jugar al Minecraft en las clases de teoria¿Hay alguien hablando pero no hagas caso¿1¿
+
+#s:400¿Escaleras piso 4¿   ___   ¿  /___\  ¿ |_____| ¿/_______\¿|_______|¿Has tenido que hacer una pausa y todo a mitad de escalera. Lamentable¿Ya no hay mas escaleras¿1¿
+#s:401¿Biblioteca(1)¿ _______ ¿/______/|¿|______||¿|______||¿|______|/¿Aqui hay gente estudiando y tal que es lo que tu no haces nunca¿Biblioque que es eso¿1¿
+#s:402¿Biblioteca(2)¿ _______ ¿/______/|¿|______||¿|______||¿|______|/¿No sabes que haces aqui habiendo todavia 1 dia y 15 horas para estudiar para el proximo examen¿Muchos libros poco tiempo¿1¿
+
+#s:999¿Pool objetos¿         ¿         ¿         ¿         ¿         ¿No deberias haber llegado aqui, para de intentar romper el juego porfi¿Que haces aqui¿Casi crack¿1¿
+
+//id, nombre, origen, destino, direccion, open
+#l:000¿Link000¿000¿100¿4¿0¿
+#l:001¿Link001¿000¿001¿2¿0¿
+#l:002¿Link002¿001¿000¿0¿0¿
+#l:003¿Link003¿001¿002¿2¿0¿
+#l:004¿Link004¿002¿001¿0¿0¿
+#l:005¿Link005¿003¿111¿4¿0¿
+
+#l:100¿Link100¿100¿200¿4¿0¿
+#l:101¿Link101¿100¿000¿5¿0¿
+#l:102¿Link102¿100¿101¿2¿0¿
+#l:103¿Link103¿101¿100¿0¿0¿
+#l:104¿Link104¿101¿102¿1¿0¿
+#l:105¿Link105¿102¿101¿3¿0¿
+#l:106¿Comedor¿102¿103¿0¿1¿
+#l:107¿Link107¿103¿102¿2¿0¿
+#l:108¿Link108¿102¿104¿1¿0¿
+#l:109¿Link109¿104¿102¿3¿0¿
+#l:110¿Link110¿101¿106¿3¿0¿
+#l:111¿Link111¿106¿101¿1¿0¿
+#l:112¿Link112¿102¿105¿2¿0¿
+#l:113¿Link113¿105¿102¿0¿0¿
+#l:114¿Link114¿106¿107¿2¿0¿
+#l:115¿Link115¿107¿106¿0¿0¿
+#l:116¿Link116¿106¿108¿3¿0¿
+#l:117¿Link117¿108¿106¿1¿0¿
+#l:118¿Link118¿106¿109¿0¿0¿
+#l:119¿Link119¿109¿106¿2¿0¿
+#l:120¿Sede¿109¿110¿0¿1¿
+#l:121¿Link121¿110¿109¿2¿0¿
+#l:122¿Salida¿101¿112¿2¿1¿
+
+#l:200¿Link200¿200¿100¿5¿0¿
+#l:201¿Link201¿200¿300¿4¿0¿
+#l:202¿Link202¿200¿201¿2¿0¿
+#l:203¿Link203¿201¿200¿0¿0¿
+#l:204¿Link204¿201¿202¿1¿0¿
+#l:205¿Link205¿202¿201¿3¿0¿
+#l:206¿Link206¿202¿203¿2¿0¿
+#l:207¿Link207¿203¿202¿0¿0¿
+#l:208¿Despacho¿203¿204¿1¿1¿
+#l:209¿Link209¿204¿203¿3¿0¿
+
+
+#l:300¿Link300¿300¿200¿5¿0¿
+#l:301¿Link301¿300¿400¿4¿0¿
+#l:302¿Link302¿300¿301¿2¿0¿
+#l:303¿Link303¿301¿300¿0¿0¿
+#l:304¿Link304¿301¿302¿1¿0¿
+#l:305¿Link305¿302¿301¿3¿0¿
+#l:306¿Link306¿302¿303¿0¿0¿
+#l:307¿Link307¿303¿302¿2¿0¿
+#l:308¿PProg¿302¿304¿2¿1¿
+#l:309¿Link309¿304¿302¿0¿0¿
+#l:310¿Link310¿301¿305¿3¿0¿
+#l:311¿Link311¿305¿301¿1¿0¿
+#l:312¿Link312¿305¿306¿0¿0¿
+#l:313¿Link313¿306¿305¿2¿0¿
+
+#l:400¿Link400¿400¿300¿5¿0¿
+#l:401¿Link401¿400¿401¿2¿0¿
+#l:402¿Link402¿401¿400¿0¿0¿
+#l:403¿Link403¿401¿402¿2¿0¿
+#l:404¿Link404¿402¿401¿0¿0¿
+
+
+//Id, nombre, espacio, descr., open, dependency, movable, hidden, turnedon, illuminate
+#o:1¿portatil¿-1¿Un portatil ya algo desgastado por jugar minecraft a 24 chunks. Tambien puedes ir a PProg¿308¿-1¿1¿0¿0¿0¿
+#o:2¿asist.¿105¿Hoja de asistnecia. El unico motivo por el que vienes a clase¿-1¿-1¿1¿0¿0¿0¿
+#o:3¿palanca¿108¿Una robusta palanca sacada de alguna serie generica de zombis. Quiza pueda "animar" a la puerta del comedor a abrirse¿106¿-1¿1¿1¿0¿0¿
+#o:4¿cepo¿999¿Un gran cepo amenazante. En el reverso tiene un logo open-source y una pequena terminal con archlinux para desbloquearlo¿-1¿-1¿1¿0¿0¿0¿
+#o:5¿matric.¿999¿Al fin. Despues de tanto sufrimiento, tienes en tus manos la tan ansiada matricula de primero de ingenieria informatica. Seria buena idea ver al director¿208¿-1¿1¿0¿0¿0¿
+#o:6¿linterna¿306¿Una linterna de manivela. No tengas el valor de decir que es tedioso despues de los grindeos que te metes en el wow¿-1¿-1¿1¿0¿0¿1¿
+#o:7¿cartel¿102¿"La cafeteria abre a las 13:00"¿-1¿-1¿0¿0¿0¿0¿
+#o:8¿reloj¿102¿Un reloj normal y corriente. Marca las 13:15¿-1¿-1¿0¿0¿0¿0¿
+#o:9¿GPT-4¿303¿A alguien, casualmente, se le ha caido un papel en el que esta anotada su clave de entrada a GPT-4. Que bendicion¿312¿1¿1¿0¿0¿0¿
+#o:10¿man.py.¿402¿Un grueso manual de python con todo lo necesario para aprender a programar en un lenguaje decente. Se el salvador de las almas en pena que siguen usando C¿-1¿-1¿1¿0¿0¿0¿
+#o:11¿llave¿204¿Una simple y robusta llave. Sostenerla te genera un sosiego nunca antes experimentado. Algo te dice que esta llave traera la calma despues de la tormenta¿122¿-1¿1¿0¿0¿0¿
+#o:12¿farol¿401¿Un farolillo con telaranas. Aunque es muy viejo, parece seguir funcionando. Probablemente tenga pilas duracell (contenido no patrocinado) ¿-1¿-1¿1¿1¿0¿1¿
+#o:13¿nota¿203¿"Se necesita la matricula aprobada de primero de ing. informatica para coger la llave que abre la entrada a la EPS"¿-1¿-1¿0¿0¿0¿0¿
+#o:14¿chuleta¿306¿No sabía que se podía optimizar tan bien el tamaño de un papel. Te sientes mas preparado para los examenes¿-1¿-1¿1¿1¿0¿0¿
+
+
+#o:101¿psic.¿102¿Estudiante psicologia: Hola, quieres participar en nuestra encuesta? Como que la psicologia NO es una ciencia? Es lo mas objetivo del mundo¿-1¿-1¿0¿0¿0¿0¿
+#o:102¿linm.1¿109¿Linux mafioso 1: No puedes pasar, la puerta se ha atrancado. Si no, aunque nuestra secta es secreta, podrias pasar porque la contrasena es open source¿-1¿-1¿0¿0¿0¿0¿
+#o:103¿linm.2¿999¿Linux mafioso 2: Necesitamos ayuda, Bill Gates esta atacando nuestra base! Ha aprovechado que es open source para entrar y destruirla¿-1¿-1¿0¿0¿0¿0¿
+#o:104¿chica¿301¿Chica: Alejate de mi, acosador! Hueles muy mal!¿-1¿-1¿0¿0¿0¿0¿
+#o:105¿chica i.¿999¿Una chica inconsciente con un cepo en la pierna, incapaz moverse¿-1¿-1¿1¿0¿0¿0¿
+#o:106¿demente¿002¿Un chico en los huesos, encogido en una esquina y con la mirada perdida. Entre sus balbuceos distingues la frase: "debe ser malloc el que falla"¿-1¿-1¿0¿0¿0¿0¿
+#o:107¿linm.3¿402¿Linux mafioso 3: Los escritorios son poco eficientes, prefiero trabajar en binario, o hexadecimal cuando estoy vago¿-1¿-1¿0¿0¿0¿0¿
+#o:108¿progr.¿999¿Programador cuerdo: Mil gracias! Ahora soy un hombre rehecho. Las marcas de inanicion han desaparecido. Python me ha devuelto la vida y la cordura. Se acabo la tirania del SIGSEGV¿-1¿-1¿0¿0¿0¿0¿
+#o:109¿director¿204¿Director: Felicidades chaval, si has llegado hasta aqui es porque has trabajado duro. O porque al menos has trabajado. O... Bueno da igual. Coge la llave y vete de una vez¿-1¿-1¿0¿0¿0¿0¿
+
+#p:1¿Player¿101¿14¿5¿1¿1¿
+
+#e:1¿Thevenin¿107¿5¿
+#e:2¿Sr. Valgrind¿999¿4¿
+#e:3¿Iteracion 4¿304¿5¿
+#e:4¿Bill Gates¿999¿10¿

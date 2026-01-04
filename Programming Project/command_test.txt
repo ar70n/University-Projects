@@ -1,0 +1,6 @@
+move south
+take Grain
+drop Grain
+inspect Grain
+patata
+exit
