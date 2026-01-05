@@ -1,0 +1,84 @@
+-tres tirpos de usuarios:
+clientes, gestor , empleados
+
+el gestor controla el aforo, pone las horas del centro, puede poner desceuntos(desceuntos solo a usuarios registrados)
+
+el empleado vende entradas, 
+
+el gestor puede vender tambien y comprar, 
+
+obras de arte y salas en la galeria, todas gestionables
+tamnbien las entradas,
+
+las entradas y salas tienen aforo maximo
+y siemprre se controla el aforo
+
+las entradas son para una exposicion en concreto, un ida, una hora y la cantidad
+
+
+los clientes compan las entradas al empleado solo en efectivo,
+los clientes tambien pueden comprar en la aplicación 
+
+las salas fisicas se dividen en subsalas, que a su vez se dividen en subsalas, asi hasta el infinito,
+
+exposiciones asociadas
+
+las entras se pueden pagar en efectivo(te la el empleado para ese dia)
+o por la aplicación con tarjeta
+
+el aforo de la exposicion es el aforo de las sala
+
+las salas tienen nombre, aforo, dimenciones(ancho y largo), numeor de tomas de electricidad y si la sala la sal permite controlar la humedad y la emperatura
+
+Descuentos:
+	haber asisitido a una exposicion hace n meses
+	compra con anteacion
+
+sistemas externos:
+	uno que permite pagar con tarjeta
+	el otro te saca un pdf de las ntrafas
+
+exposiciones
+
+las compras son el numero de entradas y todas esas entradas son para la misma exposicion
+
+obras de arte.
+	El gestor las configura
+	son propias del centro o externas
+	son cuadros esculturas, fotografias o audiovisules
+	cuadros registramosa la tecnica
+	la escultura el material
+	las fotografias el color 
+	y aduviusales duracion e idioma
+	cada una tiene cosas nombre autor, año, seguro(cuantoia y numero de poliza)
+	SOLO Cuadros, esculturas y fotografias tienen tamaño y pueden requerir cierta temperatura        	y humedad
+
+	Las obras se pueden dar de alta una a una con un formulario, pero tambien se pudeden meter a traves de un fichero de texto siguiendo un formato.
+	Las obras pueden estar estar el almacen, exposicion, prestadas, o en restauracion
+	y por defecto entran en el almacen
+
+	las que estan prestadas o en exposiion pasan despues al almacen
+	
+	si esta retirada, es un estado inalterable,
+	si acaba una exposicion, las obras van al almacen,
+	solo se resturamn las que son tuyas,
+	
+
+hay exposiciones permanentes y otras con fecha.
+
+en la web hay que filtrar por fecha, tipo de exposicion, tipo de obra.
+
+Gestor:
+	puede hacer log in, 
+	puede configuar la contraseña del empleado, 
+	puede configurar la hora de apertura del centro,
+	configurar los mese de penalizacion por no recoger la entrada de un sorteo
+	dar de alta al empleado y configurar los permisos.
+	Configurar las salas y las subsalas,
+	añadri y modificar lso datos de una obra
+	crear una exposicion y añadir las obras de arte
+	cerrar temporalmente una exposicion permanente.
+	Configura los descuntos,
+	programa y realiza los descuentos
+
+	puede consultar las estadisticas

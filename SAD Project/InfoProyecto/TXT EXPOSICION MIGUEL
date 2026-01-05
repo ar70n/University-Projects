@@ -1,0 +1,68 @@
+centro de exposiciones
+3 tipos de usuarios:
+	gestor
+		puede gestionar salas, aforos, precios (descuentos para ciertas exposiciones
+		solo a usuarios registrados), horarios y todo
+		DESCUENTOS (ACUMULABLES SI QUEREMOS):
+			Haber acudido a otra exposicón hace menos de n meses
+			reservar con cierta antelación
+	empleados
+		solo vende (no tenemos datáfono, solo efectivo)
+	clientes
+obras de arte
+
+salas (aforo máximo)
+
+ENTRADAS:
+	entradas (compras al empleado o gestor o desde la interfaz del cliente)
+	entradas para una exposición concreta (fecha, hora, numero de personas)
+	en efectivo (la da el empleado y es para ese día) o a través de la aplicación del 
+	cliente con tarjeta
+	nominales
+
+gestor puede hacer de cliente
+
+todo desde el mismo ordenador
+
+EXPOSICIONES:
+	Mismos horarios que el centro
+
+SALAS:
+	subdivisibles (1 exposición o mas en una sala)
+	subsalas subdividibles en subsubsalas, etc...
+	
+	tienen nombre, aforo, dimensiones (X,Y,Z), número de tomas de electricidad de cada
+	subsala (puedes hacer lo que cojones quieras con las tomas en subdivisiones) y si 
+	permite
+	controlar temperatura y humedad (Una y otra por separado)
+	No puedes destruir una subsala si tiene una exposición programada
+
+	aforo asociado a una exposición
+	aforo exp = sumatorio de aforos de las salas (y lo decide el gestor)
+
+	exposición asociada a sala/s o subsala/s
+
+SISTEMAS:
+	Pago con tarjeta
+	Generación de pdf con las entradas
+	
+OBRAS DE ARTE:
+	El gestor las crea de una en una usando un formulario o a través de un fichero de texto 
+	con cierto formato
+	Pueden ser del centro o externas
+	Cuadros
+		Técnica
+	Esculturas
+		Material
+	Fotografías
+		Color
+	Audiovisuales
+		Duración, idioma
+	Nombre, autor, año, seguro (Cuantía, número de póliza)
+	Tamaño, necesidad de ciertas condiciones de humedad o temperatura
+	Estado: Almacén, exposición, retiradas, prestadas, en restauración
+	Por defecto en almacén
+	Para ir a exposición desde restauración o estar prestadas se pasa por almacén
+	No se puede alterar una obra retirada
+	Si una exposición termina, las obras van al almacen
+	Ni se prestan ni se restauran ni se retiran obras que te hayan prestado

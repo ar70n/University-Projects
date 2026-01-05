@@ -1,0 +1,119 @@
+Enfasis en la interfaz
+Tres usuarios:
+-gestor del centro
+-empleados del centro
+-clientes
+Contraseña para cada usuario para seguridad
+En la galería de arte hay obras (no siempre nuestras) y salas de expsiciones
+Poder comprar entradas a empleados físicamente(aunque está digitalizado)
+Los clientes deben poder comprar online
+El gestor puede vender, comprar como cliente, y en definitivamente hacer todo
+Tanto empleados como clientes pueden comprar
+Hay un aforo máximo
+La compra de entradas es para un exposición concreta con fecha y hora
+El aforo máximo debe poder cambiarse por el gestor
+Una compra puede involucrar varias entradas
+Cada sala se puede dividir en subsalas, y las subsalas pueden seguir dividiendose infinitamente
+El aforo va asociado a cada exposición, que puede ir asociada a una o más salas (según nos resulte más conveniente, una exposición puede ser sólo en una (sub)sala o en varias)
+Las entradas se pueden pagar en efectivo, y solo son válidas para ese días. La alternativa es pagar con tarjeta en la aplicación/web, para lo que es necesario registrarse. El gestor configura los horarios de apertura del centro. Las entradas solo pueden comprarse si hay aforo y hora disponible. El gestor puede configurar ofertas, solo válidas para usuarios registrados, para ciertas exposiciones. Dos tipos de descuentos: haber asistido a una exposición en los últimos n meses o que se compren las entradas con cierto tipo de antelación, los descuentos son configurables por el gestor. Asumimos que los descuentos son acumulables. El aforo de una exposición es la suma de los aforos de las salas que forman parte de la exposición.
+Las salas tienen nombre, aforo, dimensiones (ancho, largo, alto), numero de tomas de electricidad, y si la sala permite controlar la humedad y temperatura. Al subdividir salas, las dimensiones deben sumarse adecuadamente. Las tomas de corriente las divides a la mitad siempre, por ejemplo (hay alargadores). Una sala no se puede destruir mientras una exposición está activa en esa sala.
+Hay dos sistemas externos: uno para pagar con tarjeta metiendo el número, y otro para generar un pdf con las entradas.
+A los empleados solo le pueden pagar en efectivo.
+Solo hay un ordenador, así que solo puede haber simultaneamente o el gestor, o un empleado, o un usuario (registrado). Por lo tanto si un empleado vende, será a un usuario no registrado.
+Todas las exposiciones abren a la vez.
+El control de temperatura y humedad es independiente.
+No se pueden eliminar salas o exposiciones que tengan entradas.
+Hay obras de arte. Quien introduce o elimina las obras de arte es el gestor. Las obras pueden ser propias del centro o externas. Las obras son cuadros, esculturas, fotografías y audiovisuales. De cada una de ellas registramos ciertos datos
+-Cuadros: técnica
+-Esculturas: material
+-Fotografías: color (blanco y negro o a color)
+-Audiovisuales: duración e idioma
+Cada obra tiene un autor, un año de realización, una descripción y un seguro (formado por cuantía y el numero de poliza). 
+Los cuadros, esculturas y fotografías tienen un tamaño y pueden requerir un rango de humedad y temperatura. Cada sala tendrá una temperatura y humedad fija, y las obras tendrán que caer dentro del rango.
+[Fui al baño]
+Las obras pueden darse de alta mediante un formulario (interfaz) o mediante un fichero de texto.
+Puede que haya obras que no quepan de alto.
+Puede que una obra no quepa en ninguna sala. Así que las obras pueden tener varios estados: almacén, exposición, prestadas, en restauración o retiradas. Las obras que entran nuevas entran al almacén.
+Las obras prestadas o en restauración no pueden ir directamente a la exposición, sino que tienen que pasar por almacén.
+Si una obra está retirada, ese estado es final e inalterable, así que no se puede cambiar.
+Cuando se acaba una exposición, todas las obras vuelven al almacén.
+Solo se pueden restaurar o prestar obras tuyas.
+La suma de los volumenes de las obras tiene que caber en las dimensiones de la (sub) sala.
+Todas las obras tienen dimensiones tridimensionales, incluso cuadros.
+Las obras tienen que entrar en todas las dimensiones (imagina un palo super largo).
+No hay que hacer tetris con las obras, sencillamente tienen que caber de dimensiones en la sala (sin importar que tenga otras obras), y la suma de los volumenes de todas las salas tiene que ser menor que el volumen de la sala.
+Tienes que considerar que las obras quepan en volumen y area.
+Las obras audiovisuales no tienen dimensiones.
+Una sala se puede dividir en varias subsalas, no sólo 2 necesariamente.
+Los clientes pueden ver el listado de exposiciones (incluso sin estar registrados) para las que aún se pueden comprar entradas. Hay que poder poner filtros: tipo de exposición (permanente o temporal), fecha, tipo de obra (mostrar todas las exposiciones en las que hay, al menos, una obra del tipo buscado).
+El gestor puede:
+-Hacer login con una contraseña única suya
+-Puede configurar la contraseña del empleado
+-Puede configurar la hora de apertura del centro
+-Puede configurar los meses de penalización por no recoger una entrega (entrada?) de un sorteo
+-Dar de alta al empleado y configurar los permisos
+-Configurar las salas y las subsalas
+-Añadir obras de arte, editar el estado de una obra de arte, crear una exposición, añadir obras de arte, incluyendo la sala en la que estará cada obra, fijar el precio de las entradas, cerrar temporalmente una exposición permanente
+-Configurar descuentos
+-Programar y realizar sorteos
+-Puede consultar las estadísticas.
+
+Una exposición temporal puede prolongar su fecha máxima.
+Una exposición permanente no puede eliminarse, aunque puede cerrarse temporalmente.
+Las obras no se pueden rotar. Si no cabe en las dimensiones de la sala, da igual que quepa si la giras 90 grados, decimos que no cabe.
+Al dividir en subsalas, tienes que especificar el tamaño de todas, y el programa tiene que encargarse de comprobar que todas suman lo que tienen que sumar.
+El gestor puede registrar un empleado inicialmente, antes de que exista un empleado. Una vez ya haya un empleado registrado, no se puede registrar otro.
+Los usuarios registrados inician sesión con NIF y contraseña.
+Uno no se presenta a un sorteo, si no que le toca y ya.
+
+
+
+===========================
+Segundo viernes
+===========================
+Sorteos
+El gestor programa sorteos de entradas gratis a exposiciones. Hay que especificar fecha de sorteo, plazo de inscripción, número de entradas, y el plazo de validez de las entradas, además de la exposición. (...) Los clientes se pueden registrar en sorteos activos, y el límite de entradas es de 2. Cuando termine el límite de inscripción, la app notifica a los usuarios los ganadores del sorteo. El sorteo lo realiza el gestor pulsando un botón. El sistema asigna las entradas aleatoriamente entre los incritos, respetando el número de entradas solicitadas (1 o 2). Si el primer sorteo toca a alguien con 2 entradas, se le dan a él y fin. Se genera un código para las personas ganadoras. Este código se puede utilizar para obtener un descuento (del 100%). ODIO MARRUECOS. Si un premiado no llega a usar su entrada (o sea que no hace una compra utilizando el descuento), no podrá participar en los concursos durante los n siguientes meses, siendo n un valor que configura el gestor. Cuando haces un sorteo, por ejemplo con 3 entradas, tienes que limitar el número de entradas que se pueden comprar para el resto de exposiciones para que quepan 3 entradas más (las del sorteo). Una vez te toca un sorteo, usas tu código para comprar una entrada, especificando la hora, y en ese punto se liberan el resto de exposiciones.
+Cuando se programa una exposición o sorteo o sale un descuento, se notifica a los usuarios registrados. Al registrarse, tienen que indicar si quieren recibir notificaciones o no, y por defecto no las reciben. Los clientes pueden cambiar la configuración de notificaciones para no recibirlas. Adicionalmente los empleados, si tienen permisos, podrán enviar mensajes a todos los usuarios registrados o a sólo unos específicos. Al bloquear las notificaciones, se bloquean los mensajes o no según nos parezca más correcto implementarlo.
+
+Estadística
+El sistema debe ofrecer al gestor estadísticas del número de entradas vendidas y de los beneficios obtenidos entre dos fechas, tanto globalmente como desglosadas por exposición.
+
+Los clientes registrados pueden consultar notificaciones y desactivarlas/activarlas.
+Los clientes no registrados pueden registrarse, y pueden buscar que exposiciones hay disponibles.
+Los empleados pueden editar datos personales de empleados, vender entradas, enviar mensajes a los clientes, y configurar la tempeatura y la humedad de las salas. Hay que tener cuidado de que no se cargue obras que ya están en una sala, es decir, que los cambios se mantengan en los rangos necesarios.
+
+Requisitos no funcionales.
+Que funcione en cualquier ordenador
+Portabilidad java-swing
+Interfaz de usuario sencilla y fácil de usar
+Seguridad (acceso con contraseña, permisos de los empleados, etc.)
+Decenas de miles de usuarios registrados pero no limitados.
+Miles de exposiciones registradas pero no limitadas
+Sistemas externos (pago con tarjeta y generación de entradas)
+El gestor accede con una contraseña predeterminada
+El gestor puede dar de alta empleados, cuyos datos son nombre, NIF, y número de la seguridad social. La contraseña es la misma para todos los empleados.
+El empleado accese a su usuario con su nif y su contraseña de empleados.
+Puede editar su dirección, número de seguridad social (12 nums) y numero de cuenta bancaria. (El empleado completa los datos del gestor).
+Los clientes se registran con su nif y su contraseña. Un empleado no puede registrarse como cliente. El gestor puede asignar permisos a cada empleado. La lista de permisos asignables es: vender entradas, enviar mensajes, y modificar la temperatura y humedad (este permiso en conjunto). 
+
+Exposiciones
+Nombre descripcion pueden ser temporales o permanentes y fecha
+1. El gestor da de alta una exposición en el sistema indicando estos datos (+ fecha de apertura y fin si es temporal):
+a. La exposición pasa a estar en creación, y es únicamente visible para el gest
+b. Mientras la exposición está en creación, es cuando la configura, puede fijar precio de las entradas, añadir obras de arte, en que sala se mostrará cada obra de arte. Al asignar una obra a una sala se deben cumplir las siguientes restricciones:
+-La obra no puede estar en ninguna otra exposición durante exposicion
+-Si la expo es temporal, la obra no puede ser propia, si no externa.
+-Si es permanente, la obra puede ser tanto propia como externa.
+-Las obras audiovisuales deben mostrarse en salas con tomas de electricidad.
+-Los cuadros, esculturas y fotografías deben caber en volumen y dimensiones en la sala, y se requieren humedad y temperaturas específicas (la sala debe poder controlarlas).
+-No pueden estar en la misma sala cuadros esculturas y fotografías que tengan temperatura/humedad incompatibles.
+-Una sala no puede mostrar obras de expos diferentes.
+-La sala debe estar libre mientras la estás configurando.
+-En el caso de exposiciones permanentes debe estar libre para toda la eternidad.
+-Sólo se pueden dividir salas que estén vacías.
+c. Cuando el gestor lo considere adecuado, podrá publicar la exposición, siempre que haya configurado previamente el precio de las entradas, incluso si el precio es 0. A partir de ese momento, la exposición aparecerá en la búsqueda de los clientes. También se puede borrar antes de publicarla, después no.
+d. Tras publicar una exposición, las obras no se pueden añadir ni quitar, pero sí modificar su estado.
+e. Una vez llegue la fecha de inicio de una exposición temporal, pasa a un estado que es comenzada
+f. Las exposiciones publicadas pueden cancelarse, pero hay que dejar al menos 7 días. Hay que notificar a quienes tenían entrada y devolverles el dinero.
+g. Las exposiciones temporales pueden prorrogarse
+h. Las exposiciones permanentes pueden cerrar temporalmente entre dos fechas por mantenimiento o renovación (en este último caso pueden cambiarse obras, siempre que no se hayan vendido entradas para esas fechas)
