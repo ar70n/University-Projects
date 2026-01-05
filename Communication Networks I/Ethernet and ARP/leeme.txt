@@ -1,0 +1,18 @@
+Autores: Jorge Jiménez Oropesa y Antonio Moroño Moreno
+
+Intrucciones para ejecutar el programa: 
+Use $sudo python3 practica2.py
+Para obtener información de ejecución.
+
+Normativa de entrega cumplida en su totalidad: Realizado: Varias relecturas del enunciado y revisión de archivo subido a Moodle.
+Fichero leerme.txt bien explicado: Realizado: Se ha creado un fichero leerme.txt con la información necesaria para la correcta ejecución del programa.
+Recibir tramas Ethernet, realizar comprobaciones y llamar correctamente a la función de callback de nivel superior: Realizado: Se ha comprobado mediante el uso de printfs la traza de ejecucion del programa y la pila de llamadas de las funciones comprobando así el apartado
+Enviar tramas Ethernet  correctamente: Realizado: Se ha comprobado con el propio funcionamiento del programa y con prints que el contenido de las tramas es correcto y que llegaban a los dispositivos a los que tenían que llegar.
+Imprimir mensajes sobre el protocolo 0x3003: Realizado: Se ha comprobado mediante el propio funcionamiento del programa
+Enviar correctamente peticiones ARP: Realizado: Se ha comprobado mediante el uso de prints el stack de llamadas.
+Procesar correctamente peticiones ARP recibidas: Realizado: Se ha comprobado mediante el uso de prints el stack de llamadas.
+Enviar correctamente respuestas ARP: Realizado: Se ha comprobado mediante el uso de prints el stack de llamadas.
+Procesar correctamente respuestas ARP: Realizado: Se ha comprobado mediante el uso de prints el stack de llamadas.
+Manejo correcto de la caché ARP: Realizado: Se actualiza cuando es necesario.
+Uso correcto de Locks: Realizado: Sólo se accede a las variables críticas a través del lock correspondiente
+Realiza correctamente el ARP Gratuito: Realizado:  cuando ejecutamos el comando "g" en uno de los equipos simulados por mininet, si habilitamos los mensajes de debug, se puede comprobar que el otro equipo lo recibe.
