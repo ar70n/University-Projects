@@ -1,0 +1,69 @@
+--Apartado 3--
+
+Ejecutamos el programa con distintos tipos de parámetros, sin parámetros, o con más de uno y observamos que:
+
+- Si no introducimos argumentos recibimos el siguiente mensaje de error:
+	"Se espera al menos una palabra como parametro."
+- Si introducimos como parámetros palabras cualesquiera recibimos el siguiente mensaje en la terminal:
+	"java LongitudPalabras coche esta guapo 
+Las longitudes de las palabras son: 
+- coche (5 caracteres).
+- esta (4 caracteres).
+- guapo (5 caracteres).
+
+Palabras almacenadas: [coche, esta, guapo]
+Longitud de 'No_almacenada': -1"
+
+Podemos ver que el programa funciona correctamente ya que ha guardado las palabras que hemos introducido. Sin embargo, La longitud de la palabra "No_almacenada" es -1. 
+Esto se debe a que no hemos introducido esta palabra en la colección. Es la salida esperada si intentamos ver la longitud de una palabra que no está en el objeto que hemos definido.
+Probamos ahora a ejecutar el programa introduciendo la palabra "No_almacenada":
+
+java LongitudPalabras coche esta guapo No_almacenada
+Las longitudes de las palabras son: 
+- coche (5 caracteres).
+- esta (4 caracteres).
+- guapo (5 caracteres).
+- No_almacenada (13 caracteres).
+
+Palabras almacenadas: [coche, esta, guapo, No_almacenada]
+Longitud de 'No_almacenada': 13
+
+Ahora al ejecutar el programa pasando como parametro la palabra "No_Almacenada" esta se almacena en el mapa y por tanto cuando el programa ejecuta la última linea, busca la palabra "No_almacenada" en el mapa y como ahora si se encuentra lamacenada devuelve su longitud.
+
+- Si pasamos un numero como parametro este se convierte a cadena de caracteres (String).
+
+
+--Apartado 4--
+
+1.Qué estrategia has seguido para el cálculo de las frecuencias? ¿Qué otras alternativas se te ocurren para ese
+cálculo? Indica sus ventajas e inconvenientes.
+
+Para el cálculo de las frecuencias, hemos implementado el método getFrecuencia que recorre una lista de palabras de tal forma que cada vez que la longitud de una palabra corresponda con la longitud de entrada, aumentamos en 1 la frecuencia de dicha longitud.
+Además, implementamos el método getLongitudesUnicas que devuelve el conjunto de las longitudes de cada palabra introducida. En el conjunto de longitudes, no se repite una misma longitud. De esta manera, obtenemos un conjunto de longitudes únicas. 
+Luego, el programa principal recorre la lista de longitudes únicas, y por cada longitud obtiene su frecuencia con el primer método que implementamos. 
+Otra alternativa para calcular la frecuencia sería utilizar la clase HashMap cuya clave sería la longitud y el valor sería la frecuencia de la longitud. De esta manera, se podría recorrer la lista de palabras una sola vez (con el primer método se recorría la
+lista de palabras para ambos métodos getLongitudesUnicas y getFrecuencia) e ir actualizando el HashMap.
+Además, con la clase HashMap, se podría obtener la frecuencia de una longitud específica de manera eficiente, ya que el acceso a los elementos es rápido. Una desventaja de esta alternativa es que podría requerir de más memoria, y más si la lista de palabras es muy grande.
+En efecto, tendríamos que almacenar todas las longitudes y frecuencias de cada palabra en el HashMap. El rendimiento se vería afectado igualmente ya que en cada iteración sobre la lista de palabras actualizamos el HashMap.
+
+2.¿Cómo implementarías un método getLongitudesRepetidas que devuelva las longitudes de las palabras que se
+repiten al menos una vez? Con las palabras codigo casa gato, la salida debería ser únicamente la longitud 4 letras,
+que es la única que se repite.
+
+Para implementar el método getLongitudesRepetidas, bastaría con comprobar si una longitud ya se encuentra en el hashset del método getLongitudesUnicas. Esto se haría con el método contains que verifica si un elemento se encuentra en un hashset.
+Si ese es el caso, podríamos añadir esta longitud repetida a un nuevo hashset, que contendría las longitudes repetidas.
+La implementación del método sería la siguiente:
+
+public HashSet<Integer> getLongitudesRepetidas() {
+    HashSet<Integer> setUnicas = new HashSet<Integer>();
+    HashSet<Integer> setRepetidas = new HashSet<Integer>();
+      
+    for (Integer valor : this.palabras.values())
+        if (setUnicas.contains(valor)){
+            setRepetidas.add(valor);
+        }
+        else{
+            setUnicas.add(valor);
+        }
+    return setRepetidas;
+} 
