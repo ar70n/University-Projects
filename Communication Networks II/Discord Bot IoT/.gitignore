@@ -1,0 +1,10 @@
+/entorno_virtual/
+
+# Archivos de configuración de entornos virtuales
+/data/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+

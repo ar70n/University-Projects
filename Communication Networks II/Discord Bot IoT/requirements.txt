@@ -1,0 +1,5 @@
+paho-mqtt
+discord
+python-dotenv
+requests
+unittest
