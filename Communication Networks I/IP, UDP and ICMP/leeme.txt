@@ -1,0 +1,15 @@
+Autores: Jorge Jiménez Oropesa y Antonio Moroño Moreno
+
+Intrucciones para ejecutar el programa: 
+Use $sudo python3 practica2.py
+Para obtener información de ejecución.
+
+Normativa de entrega cumplida en su totalidad: REALIZADO: Varias relecturas del enunciado y revisión de archivo subido a Moodle.
+Fichero leerme.txt bien explicado: REALIZADO: Se ha creado un fichero leerme.txt con la información necesaria para la correcta ejecución del programa.
+Recibir y enviar datagramas UDP sin opciones IP ni fragmentación:REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones.
+Recibir y enviar mensajes ICMP sin opciones IP ni fragmentación (incluyendo pruebas con ping estándar):REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones. Para el ping estándar hemos comprobado que aparece el aviso de "duplicado".
+Enviar y recibir correctamente mensajes ICMP con opciones IP:REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones.
+Enviar y recibir mensajes ICMP con un tamaño determinado:REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones. 
+Enviar datagramas UDP con fragmentación:REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones.
+Enviar datagramas UDP con fragmentación y opciones IP:REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones.
+Enviar datagramas UDP fuera de la subred actual:REALIZADO: Hemos usado Wireshark para comprobar que los resultados de las pruebas de ejecución eran correctos y hemos añadido prints adicionales en el código para verificar el flujo de datos y la correcta ejecución de las funciones.
