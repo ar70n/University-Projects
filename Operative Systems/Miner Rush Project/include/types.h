@@ -1,0 +1,28 @@
+/**
+ * @file types.h
+ * @author Antonio Moroño y Manuel Fernández
+ * @brief ADT Boolean and Status
+ *
+ */
+
+#ifndef TYPES_H_
+#define TYPES_H_
+
+/**
+ * @brief ADT Boolean
+ */
+typedef enum {
+    FALSE=0, /*!< False value */
+    TRUE=1  /*!< True value  */
+} Bool;
+
+/** 
+ * @brief ADT Status
+ */
+typedef enum {
+    ERROR=0, /*!< To codify an ERROR output */
+    OK=1,     /*!< OK output */
+END=2
+} Status;
+
+#endif /* TYPES_H_ */
