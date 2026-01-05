@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>294</y>
+      <w>282</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Usuario/
+--
+- id: String {unique}
+- nombreCompleto: String
+- nombreUsuario: String
+- contraseña: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>888</x>
+      <y>468</y>
+      <w>102</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Escritor
+--
+- nif: String
+- comision: double
+- nickname: String
+--
++ Registro(Libro l)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>174</x>
+      <y>306</y>
+      <w>174</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Publicacion/
+--
+- id: String
+- titulo: String
+- puntuacion[0..5]: int
+--
+/+ getPrecio(): double/
+/+ getAño(): date/
+/+ getGeneros(): String[1..*]/
++ getAutores(): Autor[1..*]
++ getPremios(): Premio[*]
+/+ getPaginas(): int/
+/+ getPuntos(): int/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>498</y>
+      <w>174</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Lector
+--
+- puntos: int
+--
++ getPublicacion(): Publicacion[*]
++ getPlanPrecios(): PlanPrecios
++ getPuntos():</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1098</x>
+      <y>330</y>
+      <w>108</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>TarjetDeCredito
+--
+- numero: int
+- codigo: int
+- fecha: Date
+--
++ ingresar(): boolean
++ retirar(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>336</y>
+      <w>174</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+r1=tarjeta</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>366</y>
+      <w>84</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>366</y>
+      <w>162</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>624</y>
+      <w>132</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>PlanPrecios
+--
+- tarifaMensual: double
+- fecha: LocalDateTime
+- descuento: double
+- nombre: String
+--
++ getDescuento(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>192</y>
+      <w>300</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>BibliotecaVirtual
+--
+--
++ logIn(nombreUsuario: String, contraseña: String): boolean
++ adeudoMensual(Lector l, LocalDateTime d): double
++ getPublicacionesDe(Lector l): Publicacion[*]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>774</x>
+      <y>240</y>
+      <w>54</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+r2=usuarios
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>192</y>
+      <w>342</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+r2=publicaciones
+m2=1..*</panel_attributes>
+    <additional_attributes>550.0;10.0;10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>552</y>
+      <w>36</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=plan</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>438</y>
+      <w>192</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r1=
+r2=publicaciones
+m2=*</panel_attributes>
+    <additional_attributes>300.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>390</y>
+      <w>558</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r1=autores
+m1=1..*
+bg=white
+r2=publicaciones
+m2=1..*</panel_attributes>
+    <additional_attributes>910.0;160.0;710.0;160.0;710.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>594</y>
+      <w>126</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Libro
+--
+- precio: double
+- año: date
+- extension: int
+- puntos: int
+- genero[1..*]: String
+--
++ getPrecio(): double
++ getAño(): date
++ getGeneros(): String[1..*]
++ getPaginas(): int
++ getPuntos(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>438</y>
+      <w>66</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;340.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>714</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Saga
+--
+- descuento: double
+--
++ getPrecio(): double
++ getAño(): date
++ getGeneros(): String[1..*]
++ getPaginas(): int
++ getPuntos(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>66</x>
+      <y>708</y>
+      <w>162</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+r2=libros
+m2=2..*
+bg=white
+r1=saga
+m1=0..1</panel_attributes>
+    <additional_attributes>250.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>636</y>
+      <w>132</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Acto
+--
+- fecha: LocalDateTime
+- precio: float
+- puntosParaDescuento: int
+- descuento: double
+- descripción: String
+--
++ getPrecioActo(puntos:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>648</y>
+      <w>90</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoActo
+--
++ LecturaAbierto
++ FirmaLibro
++ EncuentroVirtual
++ Taller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>666</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=tipoActo</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>540</y>
+      <w>240</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+r2=actos
+m2=*</panel_attributes>
+    <additional_attributes>380.0;10.0;380.0;110.0;10.0;110.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>552</x>
+      <y>744</y>
+      <w>102</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Basico:
+tarifaMensual=0
+descuento=0
+nombre="Basico"
+
+Estandar:
+tarifaMensual=9.99
+descuento=0.5
+nombre="Estandar"
+
+Premium:
+tarifaMensual=19.99
+descuento=1
+nombre="Premium"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>690</y>
+      <w>42</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0;50.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>300</y>
+      <w>156</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Compra
+--
+- fecha: LocalDateTime
+--
++ importe(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>336</y>
+      <w>60</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r2=comprador</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>336</y>
+      <w>102</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=publicacion
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;30.0;150.0;30.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>240</y>
+      <w>150</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+r2=compras
+m2=*</panel_attributes>
+    <additional_attributes>230.0;10.0;230.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>180</y>
+      <w>204</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>990</x>
+      <y>144</y>
+      <w>378</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>public double adeudoMensual(Lector l, LocalDateTime d) {
+    double adeudo = 0;
+    for (Compra c : compras) {
+        if (c.getLector() == l &amp;&amp; c.getLocalDateTime().getMonth() == d.getMonth()) {
+            adeudo += c.importe();
+        }
+    }
+    PlanPrecio p = l.getPlanPrecios();
+    adeudo += p.getTarifaMensual();
+    return adeudo;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>330</y>
+      <w>114</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=premios
+m1=*</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>330</y>
+      <w>78</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Premio
+--
+- nombre: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>336</y>
+      <w>144</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=actos
+m1=*
+</panel_attributes>
+    <additional_attributes>190.0;500.0;190.0;210.0;10.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>318</x>
+      <y>210</y>
+      <w>210</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>compra.publicacion=[0..*]
+compra.acto=[0..*]
+Sin embargo, al menos uno de los arrays (publicacion o acto) debe contener al menos un elemento</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>258</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>336</y>
+      <w>120</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;640.0;180.0;640.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>438</y>
+      <w>18</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>336</x>
+      <y>822</y>
+      <w>192</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>public double getPrecio() {
+    double precio = 0;
+    for (Libro l : this.libros) {
+        precio += l.getPrecio();
+    }
+    precio = precio - precio * this.descuento;
+    return precio;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>744</y>
+      <w>42</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>450</x>
+      <y>0</y>
+      <w>258</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>public double importe() {
+    double importe = 0;
+    PlanPrecios pp = this.getLector().getPlanPrecios();
+    double d = pp.getDescuento();
+
+    for (Publicacion pub : this.getPublicaciones()) {
+        double pr = pub.getPrecio();
+        importe += pr - pr * d;
+    }
+
+    for (Acto a : this.getActos()) {
+        importe += a.getPrecioActo(this.getLector());
+    }
+
+    return importe;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>678</x>
+      <y>510</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>public PlanPrecios getPlanPrecios(){
+return this.PlanPrecios;
+}
+
+public int getPuntos(){
+return this.puntos;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>522</y>
+      <w>66</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>696</x>
+      <y>744</y>
+      <w>168</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>public double getTarifaMensual(){
+return this.tarifaMensual;
+}
+
+public double getDescuento(){
+return this.descuento;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>690</y>
+      <w>138</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>912</x>
+      <y>726</y>
+      <w>240</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>public double getPrecioActo(Lector l) {
+int puntos = l.getPuntos();
+    if (puntos &gt;= this.puntosParaDescuento) {
+        puntos = puntos - this.puntosParaDescuento;
+        return this.precio - this.precio * this.descuento;
+    }
+    return this.precio;
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>702</y>
+      <w>192</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>156</y>
+      <w>84</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;300.0;120.0;10.0</additional_attributes>
+  </element>
+</diagram>

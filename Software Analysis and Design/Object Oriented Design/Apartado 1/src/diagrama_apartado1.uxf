@@ -1,0 +1,47 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>110</y><w>290</w><h>230</h></coordinates><panel_attributes>Article
+--
+- title: String
+- year: int
+- joutrnal: String
+- volume_ int
+- issue: int
+--
++ Article(Author[1..*] authors, int year, String title, 
+               String journal, int vol, int issue)
++ getAuthors():Author[1..*]
++ getYear(): int
++ get Title(): String
++ getJournal(): String
++ getVolume(): int
++ getIssue(): int
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>160</y><w>210</w><h>140</h></coordinates><panel_attributes>Author
+--
+- lastName: String
+- name: String
+--
++ Author(String name, String lastName)
++ getLastName(): String
++ getName(): String
++ getInitial(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>570</y><w>270</w><h>80</h></coordinates><panel_attributes>APAArticleFormatter
+--
+--
++ APAArticleFormatter()
++ formatReferemnce(Article article): String
++ formatAuthorsList(Author[*] authors): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>210</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r2=-authors
+m2=1..*</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>330</y><w>600</w><h>390</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;370;240;370;240;320;240;370;580;370;580;320</additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>460</y><w>130</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>330</y><w>260</w><h>140</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+/ArticleFormatter/
+--
+- name: String
+--
++ ArticleFormater(String name)
++ getName(): String
++ format(Article[*] articles): String
+/+ formatReference(Article article): String/
+/+ formatAuthorsList(Author[*] authors): String/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>570</y><w>270</w><h>80</h></coordinates><panel_attributes>IEEEArticleFormatter
+--
+--
++ IEEEArticleFormatter	()
++ formatReferemnce(Article article): String
++ formatAuthorsList(Author[*] authors): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>460</y><w>150</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;110</additional_attributes></element></diagram>

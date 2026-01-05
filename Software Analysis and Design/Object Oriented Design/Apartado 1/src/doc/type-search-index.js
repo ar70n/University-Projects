@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"APAArticleFormatter"},{"p":"<Unnamed>","l":"Article"},{"p":"<Unnamed>","l":"ArticleFormatter"},{"p":"<Unnamed>","l":"Author"},{"p":"<Unnamed>","l":"IEEEArticleFormatter"},{"p":"<Unnamed>","l":"Main"}]
