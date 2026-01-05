@@ -1,0 +1,6 @@
+Número de pareja: 15
+Integrantes:
+ -Jorge Jiménez Oropesa
+ -Antonio Moroño Moreno
+ 
+ Nota: el código ensamblador de ordenación correspondiente al ejercicio 1 se encuentra en la carpeta "asm". Se incluyen las dos versiones del código: la inicial, que emplea la instrucción NOP para esquivar los riesgos que presenta el procesador inicial, y la versión sin NOP que el procesador mejorado permite ejecutar.

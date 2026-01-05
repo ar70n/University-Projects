@@ -1,0 +1,38 @@
+Address     Code        Basic                        Line Source
+
+0x00400000  0x0fc10417  auipc x8,0x0000fc10          17   	la s0, array
+0x00400004  0x00040413  addi x8,x8,0                      
+0x00400008  0x02800493  addi x9,x0,0x00000028        19   	addi s1, zero, 40 # n = 10 * 4
+0x0040000c  0x00000913  addi x18,x0,0                20   	addi s2, zero, 0 # i = 0 * 4
+0x00400010  0x0fc10a17  auipc x20,0x0000fc10         23   	la s4, array_copy
+0x00400014  0x028a0a13  addi x20,x20,0x00000028           
+0x00400018  0x00995e63  bge x18,x9,0x0000001c        29   	bge s2, s1, start # if i >= n ==> fin
+0x0040001c  0x01240333  add x6,x8,x18                31   	add t1, s0, s2 # t1 := array + i
+0x00400020  0x00032983  lw x19,0(x6)                 33   	lw s3, (t1) # s3 := mem[dir_array]
+0x00400024  0x012a0ab3  add x21,x20,x18              35   	add s5, s4,s2 # s5 := array_copy + i
+0x00400028  0x013aa023  sw x19,0(x21)                37   	sw s3, (s5) # mem[array_copy + i] := mem[array + i]
+0x0040002c  0x00490913  addi x18,x18,4               39   	addi s2,s2,4 # i += 1 * 4
+0x00400030  0xfe9ff06f  jal x0,0xffffffe8            43   	j for_init
+0x00400034  0x000a0433  add x8,x20,x0                53   	add s0, s4, zero # s0 = array_copy
+0x00400038  0x02800493  addi x9,x0,0x00000028        54   	addi s1, zero, 40  # n = 10 * 4
+0x0040003c  0x00000913  addi x18,x0,0                55   	addi s2, zero, 0 # i = 0 * 4
+0x00400040  0x04995863  bge x18,x9,0x00000050        59   	bge s2, s1, done # if i >= n  ==> fin
+0x00400044  0x00090a13  addi x20,x18,0               61   	addi s4, s2, 0 # min_index = i
+0x00400048  0x01440333  add x6,x8,x20                63   	add t1, s0, s4 # t1 := = array + min_index
+0x0040004c  0x00032a83  lw x21,0(x6)                 65   	lw s5, (t1) # min_value = mem[array + min_index]
+0x00400050  0x00490993  addi x19,x18,4               67   	addi s3, s2, 4 # j = i + 1 * 4
+0x00400054  0x0299d063  bge x19,x9,0x00000020        73   	bge s3, s1, for_ext_part2  #if j >= n ==> break
+0x00400058  0x01340e33  add x28,x8,x19               75   	add t3, s0, s3 # t3 := array + j
+0x0040005c  0x000e2b03  lw x22,0(x28)                77   	lw s6, (t3) # s6 := mem[array + j]
+0x00400060  0x015b5663  bge x22,x21,0x0000000c       79   	bge s6,s5,if_greater # if mem[array + j] >= min_value ==> if_greater
+0x00400064  0x00098a13  addi x20,x19,0               81   	addi s4,s3,0 # min_index := j	
+0x00400068  0x000b0a93  addi x21,x22,0               82   	addi s5, s6, 0 # min_value := mem[array + j]
+0x0040006c  0x00498993  addi x19,x19,4               87   	addi s3,s3,4 # j += 1 * 4;
+0x00400070  0xfe5ff06f  jal x0,0xffffffe4            89   	j for_int
+0x00400074  0x01240333  add x6,x8,x18                95   	add t1, s0, s2 # t1 := array + i
+0x00400078  0x00032b83  lw x23,0(x6)                 97   	lw s7, (t1) # aux := mem[array + i]
+0x0040007c  0x01532023  sw x21,0(x6)                 99   	sw s5, (t1) # mem[array + i] := min_value
+0x00400080  0x01440e33  add x28,x8,x20               101  	add t3, s0, s4 # t3 := array + min_index
+0x00400084  0x017e2023  sw x23,0(x28)                103  	sw s7, (t3) # mem[array + min_index] := aux
+0x00400088  0x00490913  addi x18,x18,4               105  	addi s2,s2, 4 # i += 1 * 4
+0x0040008c  0xfb5ff06f  jal x0,0xffffffb4            107  	j for_ext_part1
