@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"fichero"},{"l":"infoNutricional"},{"l":"ingrediente"},{"l":"menu"},{"l":"planificador"},{"l":"plato"}];updateSearchResults();
