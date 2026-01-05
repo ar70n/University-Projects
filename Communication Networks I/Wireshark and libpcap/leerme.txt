@@ -1,0 +1,16 @@
+Autores: Jorge Jiménez Oropesa y Antonio Moroño Moreno
+
+Intrucciones para ejecutar el programa: 
+Use $sudo python3 practica1.py
+Para obtener información de ejecución.
+
+Normativa de entrega cumplida en su totalidad: Realizado: Varias relecutras del enunciado y revisión de archivo subido a Moodle.
+Fichero leerme.txt bien explicado: Realizado: Se ha creado un fichero leerme.txt con la información necesaria para la correcta ejecución del programa.
+Contar paquetes de una traza: Realizado: Se ha comprobado que el número de paquete que muestra nuestro programa coincide con el que indica Wireshark. Revisar captura de pantalla.
+Contar paquetes de la interfaz de red: Realizado: Se ha comprobado que el numero de paquetes de nuestro programa coincide con la suma de los paquetes de los dos archivos abiertos con Wireshark.
+Uso de un único "flujo" para traza e interfaz: Realizado: Se ha distinguido el el tipo de flujo únicamente cuando era necesario: al abrir el handle y los archivos de volcado, al guardar la información de los paquetes y al cerrar los archivos de volcado.
+Almacenar en una traza el tráfico capturado en vivo: Realizado: Se ha comprobado que todos los bytes de la traza capturado coincide con lo que indica Wireshark en un conjunto diverso de paquetes.
+Separar correctamente el tráfico capturado en dos trazas: Realizado: Se ha comprobado que los paquetes capturados de cada tipo de tráfico coinciden con lo que indica Wireshark, hemos comprabado los Bytes 12 y 13 de varios paquetes para esto.
+Gestionar  correctamente el numero de paquetes a leer: Realizado: Se ha comprobado que el número de paquetes que muestra nuestro programa coincide con el que se indica en los argumentos de entrada y también que si no se especifica el número de paquetes a leer, se leen paquetes hasta terminar el programa con Ctrl+C.
+Calcular tiempo entre primer y último paquete: Realizado: Cronometramos el tiempo entre el primer y último paquete con nuestro teléfono y comprobamos que coincide con el que indica nuestro programa.
+mprimir los N primeros bytes de un paquete y validarlo con Wireshark (captura de pantalla): Realizado: Se ha comprobado que los bytes que muestra nuestro programa coinciden con los que indica Wireshark. Revisar captura de pantalla.
