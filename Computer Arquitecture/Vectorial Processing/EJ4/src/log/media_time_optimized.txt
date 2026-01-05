@@ -1,0 +1,5 @@
+Promedio 0: 1,9613999999999998
+Promedio 1: 8,192
+Promedio 2: 16,2458
+Promedio 3: 56,74439999999999
+Promedio 4: 227,4534

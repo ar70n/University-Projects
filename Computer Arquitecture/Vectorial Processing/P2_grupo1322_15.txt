@@ -1,0 +1,4 @@
+Número de Pareja -> 15
+Integrantes -> Antonio Moroño y Jorge Jiménez
+
+Nota: En los ejercicios se incluyen adicionalmente scripts y carpetas utilizadas para medir tiempo a lo largo de la práctica.
