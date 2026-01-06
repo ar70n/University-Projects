@@ -1,0 +1,279 @@
+GESCOMSIM-80
+
+Implementada la linea de vision de la cartografía de modo que
+si hay LOS se pinta un enlace amarillo y si no hay LOS no se pinta nada
+
+Por otro lado se ha intentado que los enlaces al cambiar desde/a una
+E-Lynx-MP se mantengan.
+
+Ademas se ha corregido que en los enlaces se muestra el color del
+enlace del caso MEJOR.
+
+Por ultimo, ahora se muestra un mensaje para indicar visualmente
+al nodo al que se ha conectado una a maquina cuando se ha
+conectado a traves del launcher.
+GESCOMSIM-000
+
+ULTIMO COMMIT ANTES DEL PLAN DE PRUEBAS
+Rebranding a version 4.0 y eliminacion de warnings/bugs pequeños
+
+Hasta aquí mi aportación, atentamente: El Becario.
+GESCOMSIM-RF7800H
+
+Radio totalmente implementada
+De paso arreglamos como se veia la ELYNXHH
+Merge branch 'feature/ELYNXMP'
+
+Primera implementacion de ELYNXMP terminada sujeta a futuros cambios
+GESCOMSIM-ELYNXMP
+
+Implementacion de ELYNXMP terminada.
+
+Se ha incluido en la vista de colaterales el seguno canal de la radio.
+Los enlaces muestran que hay conexion entre dos nodos mientras
+uno de los enlaces esté activo. Tambien se muestra el radio de la
+segunda interfaz de radio.
+
+Se ha implementado la segundo interfaz de radio a modo de grupo de voz
+ver más info sobre la implementacion en Elynx.java
+
+Primeros pasos en el desarrollo de la RF7800
+GESCOMSIM-ELYNX
+
+Version funcional con GESCOMSIM.
+Sin decisiones a nivel de diseño por el bicanal
+GESCOMSIM-ELYNXMP
+
+Se puede cambiar el tamaño y la forma del navegador
+sin que se rompa la radio
+GESCOMSIM-ELYNX
+
+Interfaz bicanal implementada en VM
+Falta que los cambios en Narrow y Wide afecten
+cada uno a su interfaz y probar otros casos
+GESCOMSIM-ELYNXMP
+
+Implementacion terminada a falta de probar la inegracion funcional
+con GESCOMSIM.
+GESCOMSIM-ELYNX
+
+Estructura de las pantallas y logica de desplazamiento
+en las pantallas.
+GESCOMSIM-ELYNXMP
+
+Botones de la radio, frame de la pantalla y primeras modificaciones
+de state machine.
+GESCOMSIM-ELYNXMP
+
+Primeros pasos en la interfaz web
+GESCOMSIM-Launcher
+
+El metodo de conexion del supervisor de la API puede cargar un fichero
+de mision e iniciar la simulación como el nodo supervisor especificado.
+GESCOMSIM-Launcher
+
+Implementado el endpoint para conectarse como participante a la simulación
+Revert "GESCOMSIM-Launcher"
+
+This reverts commit ddf636979446b0228cd3474661faa93a0fa936ba.
+Reapply "GESCOMSIM-Launcher"
+
+Correccion de validLicense.
+GESCOMSIM-Launcher
+
+Correcion error
+GESCOMSIM-000
+
+Los radios de los nodos se recalculan cuando cambia la cartografía,
+incluido al cambiar entre ejecución y elevación.
+GESCOMSIM-000
+
+Bug fix: Al cerrar un archivo de mision y crear uno nuevo el nodo
+StretchPinPlaceHolder no se posicionaba en los modos ejecución/elevación.
+GESCOMSIM-Launcher
+
+Implementación inicial finalizada.
+Funcionalidad actual: Lanzar simulación conjunta.
+GESCOMSIM-Launcher
+
+Implementada la persistencia del campo ip en ficheros de misión
+GESCOMSIM-Launcher
+
+Instalador del launcher y gestion de licencia en la API
+GESCOMSIM-000
+
+El radio de los nodos se actualiza con cambios en la frecuencia y potencia
+de la radio asociada.
+GESCOMSIM-LAUNCHER
+
+Se ha modificado la ruta de descarga de los ficheros de misión al conectarse
+como participante, ya que al ejecutarse como servicio de Windows la ruta
+por defecto era C:\Windows\System32, lo cual causaba errores de permisos.
+Ahora se detecta dinámicamente la ubicación de instalación de GESCOM-SIM
+y se utiliza como destino para la descarga del archivo de misión.
+
+Además, para evitar errores al instanciar el cliente MQTT al ejecutar GESCOM-SIM
+como servicio de Windows, se ha añadido explícitamente MemoryPersistence en la
+creación de los objetos MqttClient. Esto evita que Eclipse Paho intente generar
+archivos temporales en ubicaciones restringidas por el sistema, como System32,
+resolviendo así los fallos silenciosos o excepciones al inicializar el cliente MQTT.
+GESCOMSIM-000
+
+Se ha implementado un sistema de coreecion del posicionamiento de los nodos.
+Cuando el radio de un nodo sobresale de la cartografía esta se deforma perdiendo
+precision por lo que el sistema previene que esto ocurra.
+
+Actualizacion del splash
+Merge branch 'feature/launcher'
+GESCOMSIM-000
+
+Si el radio del nodo es mas grande que la mitad de la altura/anchura
+no se dibuja.
+GESCOMSIM-000
+
+Bugfix: Ahora cerrar un archivo de misión desde el modo ejecución/elevación
+no genera una NullPointerException.
+GESCOMSIM-000
+
+El cambio en la función undoChanges de ExpandForm.java es un parche
+que evita multitud de NullPointerExceptions que ocurrían pero no es una
+solución lógicamente correcta porque no revierte ningún cambio.
+El problema de fondo está en el método clonar de Planificacion.java.
+
+Por otro lado el botón de cancelar no funcionaba en el cambio de cartografía
+porque la cartografía se gestiona de forma independiente a la planificación.
+Por úlitmo la opción de cartografía seleccionada no se guardaba como
+preseleccion para futuros cambios.
+GESCOMSIM-Launcher
+
+Estructura inicial de la API para comunicarse con el launcher.
+Implementado el checkeo de actividad de la 	API: CheckApiServiceImpl.java
+GESCOMSIM-000
+
+Ahora al cambiar al modo elevación no se muestran las redes, la información
+sobre los enlaces colaterales se actualiza automáticamente al cambiar
+la posición de los nodos.
+GESCOMSIM-000
+
+Bugfix: Antes si solo cambiabas de modo ejecución a modo planificación cada
+vez que cambiabas al modo ejecución se cargaba de nuevo la cartografía,
+esto dejaba de pasar en cuanto entrabas una vez al modo planificación.
+GESCOMSIM-000
+
+Ahora cuando se para el simulador, los enlaces en modo ejecución/elevación
+se ponen de color negro y discontinuos
+GESCOMSIM-81
+
+Merge branch 'feature/GESCOMSIM-81'
+GESCOMSIM-000
+
+Limpieza de imports y mejora en la gestion de los radios de los nodos con
+la PRIMARY_LAYER
+GESCOMSIM-000
+
+Corrección de actualización del ver en Mqtt.java
+Implementación de enlaces bilaterales en modo ejecución/elevación
+GESCOMSIM-81
+
+Métodos de cobertura para los distintos modelos de degradación.
+GESCOMSIM-81
+
+Método para calcular la distancia en pixels dada una distancia en metros
+usando la longitud en vez de la latitud.
+
+Esto se usará para ovalar los radios de modo que representen mejor el radio
+de cobertura (esto se tiene en cuenta en los enlaces).
+GESCOMSIM-81
+
+IMPORTANTE: Como notas finales, el cálculo del valor del radio no es
+tan preciso como debería (perdida de precision por division) y el modo
+de añadir los radios al layer no es tan elegante como me gustaría.
+
+- CNodo: Los atributos del radio del nodo se almacenan en GescomsimNodo.
+
+- Planificacion: La eliminación de los radios se efectua en GescomsimNodo.
+
+- GescomsimNodoRadius: Se ha migrado lógica que se llevaba a cabo
+en GescomsimEditPart al constructor y se ha añadido funcionalidad.
+
+- GescomsimNodo: Se ha migrado la lógica que anterioirmente estaba en
+GescomsimEditPart al método updateRadius.
+
+- GescomsimEditPart: Se ha implementado un método que añade los
+radios de los nodos al PRIMARY_LAYER.
+GESCOMSIM-000
+
+Bugfix: Antes si cambiabas al modo ejecución/elevación y después añadías
+un nodo en el modo planificación y volvías a cambiar al modo
+ejecución/elevación, este nodo no era visible.
+GESCOMSIM-000
+
+Ahora no se permite la creación de redes en el modo ejecución/elevación.
+Para los nodos no se ha restringido ya que el nodo StretchPinPlaceholder
+se crea en fase de ejecución/elevación
+GESCOMSIM-000
+
+El zoom se resetea a 1.0 cuando se cambia de modo en vez de mantenerse.
+Puede hacerse que guarde el zoom de cada modo.
+GESCOMSIM-81
+
+Correcciones y aclaraciones.
+GESCOMSIM-81
+
+Método  DistanceToPx(double dist) (no funciona correctamente).
+Debería calcular la distancia en pixels dada una distancia en metros.
+
+- Supone que la distancia en metros sigue la curvatura de la tierra
+- Calcula la distancia solo con componente latitudinal.
+- Transforma la latitud de pixels.
+
+Presiento que la precisión de las divisiones en java es responsable del error.
+GESCOMSIM-81
+
+Se calcula el radio de cobertura de únicamente la primera red a la que
+esta asignado (por ampliar a que se dibuje un radio por cada red del nodo).
+
+Centra el radio en el nodo.
+GESCOMSIM-81
+
+Se dibuja un círculo alrededor de los nodos en el modo ejecución y en el
+modo elevación.
+GESCOMSIM -81
+
+Refactorización de la clase FollowerDecorationFigure a GescomsimNodoRadius.
+Ahora el ciruclo no aparece relleno y se puede seleccionar el nodo sin problema.
+El centrado del radio de cobertura se ha ajustado manualemente a las
+dimensiones por defecto del nodo pero al redimensionar no se cuadra correctamente.
+GESCOMSIM-81
+
+Limpieza de los radios de los nodos
+y evolución de la clase GescomsimNodoRadius.
+GESCOMSIM-81
+
+Nuevo metodo coverageRadiusOkamuraHata(CNodo nodofrom, CRed red) que
+calcula en km el radio de cobertura de un nodo.
+
+Refactorizacion con método rxdbm2BER(rxdbm, txwatts)
+GESCOMSIM-000
+
+Ahora al hacer click derecho sobre un enlace en modo ejecución o en modo
+elevación no se muestra en el menú desplegable la opción de ver
+propiedades del enlace ya que lanzaba una excepción.
+
+Esto es porque solo en modo planificación aparecen las redes, que
+distinguen los enlaces.
+Merge branch 'feature/GESCOMSIM-91'
+GESCOMSIM-000
+
+Ahora se muestra el nombre del archivo al cargarlo
+GESCOMSIM-91
+
+Implementado el efecto de la lluvia en los modelos de voz que utilizan
+la frecuencia como parámetro.
+
+Se ha añadido la atenuación por lluvia, ya que es el fenómeno climático
+más relevante para la propagación de la señal, especialmente en frecuencias
+superiores a 5 GHz. No se han incluido otros efectos climáticos por su
+impacto menor en comparación con la lluvia.
+
+Referencia: Capítulo 8 del informe COST 231 (http://www.lx.it.pt/cost231/final_report.htm)
