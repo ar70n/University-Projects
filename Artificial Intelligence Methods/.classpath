@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio Moroño/Documents/Mi Carpeta Personal/Carrera/Cuarto/Segundo Cuatrimestre/Artificial Intelligence Methods/Labs/API/xchart-3.8.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio Moroño/Documents/Mi Carpeta Personal/Carrera/Cuarto/Segundo Cuatrimestre/Artificial Intelligence Methods/Labs/API/comp2001-framework-2026.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio Moroño/Documents/Mi Carpeta Personal/Carrera/Cuarto/Segundo Cuatrimestre/Artificial Intelligence Methods/Labs/Lab 8/PersonnelScheduling.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio Moroño/Documents/Mi Carpeta Personal/Carrera/Cuarto/Segundo Cuatrimestre/Artificial Intelligence Methods/Labs/Lab 8/HyFlex_1.0.0_ThreadTimer.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
