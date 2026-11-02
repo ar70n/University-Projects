@@ -15,7 +15,6 @@ More about me: [ar70n.github.io](https://ar70n.github.io)
 | [Computer Architecture](Computer%20Arquitecture) | Pipelined RISC-V core, cache behaviour, OpenMP and SIMD | VHDL, C |
 | [RISC-V](Computer%20Structures/RISC-V) | RISC-V processor | VHDL |
 | [Database Implementation](Databases%20Fundamentals/Database%20Implementation) | Storage and index implementation | C |
-| [Art Gallery Manager](SAD%20Project) | Object-oriented management system for an exhibition centre | Java |
 | [Algorithm Analysis](Algorithm%20Analysis) | Sorting and searching algorithms and their complexity | C |
 | [Statistical Foundations](Statistical%20Foundations) | Statistical modelling and simulation | R |
 
