@@ -1,0 +1,27 @@
+# Build output and binaries
+*.o
+*.a
+*.so
+*.out
+*.exe
+*.class
+*.jar
+__pycache__/
+*.pyc
+
+# Logs and simulator output
+*.log
+transcript
+*.wlf
+work/
+
+# Local state, secrets and tooling
+*.pkl
+.env
+.venv/
+.settings/
+.classpath
+.project
+.vscode/
+.idea/
+.DS_Store

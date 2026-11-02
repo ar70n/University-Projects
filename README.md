@@ -1,35 +1,22 @@
-# 🎓 University Projects Portfolio
+# University Projects
 
-![University](https://img.shields.io/badge/University-UAM-blue)
-![Degree](https://img.shields.io/badge/Degree-Math%20%26%20CompSci-orange)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+Selected coursework from my double degree in Computer Engineering and Mathematics at Universidad Autónoma de Madrid. Most projects keep the original assignment brief next to the code, in Spanish, because it explains the constraints behind the design.
 
-## 👋 Introduction
+More about me: [ar70n.github.io](https://ar70n.github.io)
 
-Welcome to my academic portfolio! This repository serves as a centralized archive of the coding projects, assignments, and research I have undertaken during my **Double Degree in Mathematics and Computer Science** at **Universidad Autónoma de Madrid**.
+## Projects
 
-This collection reflects my journey through rigorous algorithmic problems, low-level systems programming, oriented object programming, and mathematical modeling.
-
-## 📂 Repository Structure
-
-The projects are organized by subject to facilitate navigation. Below is a summary of the key directories:
-
-| Subject / Folder | Description | Key Tech Stack |
+| Project | What it covers | Stack |
 | :--- | :--- | :--- |
-| **Algorithm Analysis** | Study of algorithmic complexity, sorting, and optimization problems. | `C` |
-| **Calculus Laboratory**| Study of mathematical results and models through a simulation approach | `Sagemath` |
-| **Communication Networks** | OSI model reviewed in depth. | `C`, `Python` |
-| **Computer Architecture** | Low-level logic, assembly, and hardware interaction. | `Assembly`, `C`, `Bash` |
-| **Computer Fundamentals** | Logic circuits in depth. | `Schematics`, `VHDL` |
-| **Computer Structures** | RISC-V and its components reviewed in depth . | `VHDL` |
-| **Data Structures** | Study and implementation of programming data structures. | `C` |
-| **Databases Fundamentals** | SQL queries, schema design, and database management. | `SQL` , `C` |
-| **Numerical Calculus** | Mathematical simulations and numerical methods. | `MATLAB` |
-| **Operative Systems** | implementation of concurrency, threading, and process management. | `C`, `Bash` |
-| **Programming Project** | First year programming project focused in modulation. | `C` |
-| **Software Analysis & Design** | Design patterns, UML modeling, and software architecture (SAD Project). | `Java`, `UML` |
-| **Statistical Foundations**| R overview for classic statistic results. | `R` |
+| [Web Server](Communication%20Networks%20II/Web%20Server) | Concurrent HTTP server | C |
+| [Microservices](Communication%20Networks%20II/Microservices) | Order management coordinated through message queues | Python, RabbitMQ |
+| [Discord Bot IoT](Communication%20Networks%20II/Discord%20Bot%20IoT) | IoT devices and a rule engine controlled from Discord | Python, MQTT |
+| [Miner Rush](Operative%20Systems/Miner%20Rush%20Project) | Proof-of-work mining simulation with POSIX concurrency | C |
+| [Computer Architecture](Computer%20Arquitecture) | Pipelined RISC-V core, cache behaviour, OpenMP and SIMD | VHDL, C |
+| [RISC-V](Computer%20Structures/RISC-V) | RISC-V processor | VHDL |
+| [Database Implementation](Databases%20Fundamentals/Database%20Implementation) | Storage and index implementation | C |
+| [Art Gallery Manager](SAD%20Project) | Object-oriented management system for an exhibition centre | Java |
+| [Algorithm Analysis](Algorithm%20Analysis) | Sorting and searching algorithms and their complexity | C |
+| [Statistical Foundations](Statistical%20Foundations) | Statistical modelling and simulation | R |
 
-
-> **Note:** Each directory typically contains the source code and, in some cases, specific documentation for that assignment.
-
+Projects were developed as coursework, several of them in teams.

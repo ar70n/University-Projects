@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"blockchain"},{"l":"blockchain.message"},{"l":"blockchain.method"},{"l":"blockchain.test"},{"l":"blockchain.utils"},{"l":"exceptionbc"},{"l":"interfacebc"}];updateSearchResults();
